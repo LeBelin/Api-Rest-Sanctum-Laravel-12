@@ -10,20 +10,20 @@ use Illuminate\Support\Facades\Hash;
 class ApiController extends Controller
 {
     // register API
-    public function register(Request $request) {
-        $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|confirmed',
-        ]);
+    // public function register(Request $request) {
+    //     $request->validate([
+    //         'name' => 'required|string',
+    //         'email' => 'required|email|unique:users,email',
+    //         'password' => 'required|confirmed',
+    //     ]);
 
-        User::create($request->all());
+    //     User::create($request->all());
 
-        return response()->json([
-            "status" => "success",
-            "message" => "Utilisateur enregistrer avec succée",
-        ]);        
-    }
+    //     return response()->json([
+    //         "status" => "success",
+    //         "message" => "Utilisateur enregistrer avec succée",
+    //     ]);        
+    // }
 
     // login API
     public function login(Request $request) {
@@ -62,9 +62,9 @@ class ApiController extends Controller
         }
     }
 
-    // profile API
-    public function profile() {
-
+    // rendezvous API
+    public function rendezvous() {
+        
     }
 
     // logout API
